@@ -61,9 +61,9 @@ body{background:#15100f;color:#fff2e8}
 </style><style>.menu-price{font-size:18px!important;font-weight:800!important;color:#9f4b51!important;letter-spacing:.01em;margin-top:12px!important}.menu-tabs{gap:8px}.menu-card{min-height:145px}</style><style>
 /* Uniform menu-card pricing alignment */
 .menu-grid{align-items:stretch}
-.menu-card{display:flex;flex-direction:column;justify-content:flex-start;height:100%;box-sizing:border-box;min-height:160px}
-.menu-card h3{margin:0 0 18px}
-.menu-card .menu-price{margin-top:auto!important;margin-bottom:0!important;padding-top:16px;line-height:1.25}
+.menu-card{display:flex;flex-direction:column;justify-content:flex-start;height:100%;box-sizing:border-box;min-height:128px;padding:19px 22px}
+.menu-card h3{margin:0 0 8px}
+.menu-card-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:8px}.menu-card .menu-price{margin:0!important;padding:0!important;line-height:1.25}.menu-heart{font-size:21px;line-height:1;color:#c66a70;flex-shrink:0;user-select:none}@media(max-width:650px){.menu-card{min-height:112px;padding:16px 14px}.menu-heart{font-size:19px}}
 </style></head>
 <body>
 <div class="topline">Кава, десерти та особливі моменти ♡</div>
@@ -204,7 +204,7 @@ const items={
     ]
   ]
 };
-const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,price])=>'<article class="menu-card fade"><h3>'+name+'</h3><p class="menu-price">'+price+'</p></article>').join('')}
+const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,price])=>'<article class="menu-card fade"><h3>'+name+'</h3><div class="menu-card-bottom"><p class="menu-price">'+price+'</p><span class="menu-heart" aria-hidden="true">♥</span></div></article>').join('')}
 document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});tab.classList.add('active');tab.setAttribute('aria-selected','true');renderMenu(tab.dataset.category)}));renderMenu('coffee');
 const toggle=document.getElementById('toggle'),nav=document.getElementById('navlinks');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 </script>
