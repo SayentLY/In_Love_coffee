@@ -58,7 +58,13 @@ body{background:#15100f;color:#fff2e8}
 .eyebrow{color:#f58e87}
 @media(max-width:650px){.navlinks{background:#211817;border-color:#49332e}.hero-copy{padding-top:64px}.hero h1{font-size:clamp(58px,14vw,82px)}.hero-photo{min-height:340px}.menu-grid{grid-template-columns:repeat(2,1fr)}.location-card{box-shadow:10px 10px 0 #563332}}
 @media(max-width:380px){.menu-grid{grid-template-columns:1fr}}
-</style><style>.menu-price{font-size:18px!important;font-weight:800!important;color:#9f4b51!important;letter-spacing:.01em;margin-top:12px!important}.menu-tabs{gap:8px}.menu-card{min-height:145px}</style></head>
+</style><style>.menu-price{font-size:18px!important;font-weight:800!important;color:#9f4b51!important;letter-spacing:.01em;margin-top:12px!important}.menu-tabs{gap:8px}.menu-card{min-height:145px}</style><style>
+/* Uniform menu-card pricing alignment */
+.menu-grid{align-items:stretch}
+.menu-card{display:flex;flex-direction:column;justify-content:flex-start;height:100%;box-sizing:border-box;min-height:160px}
+.menu-card h3{margin:0 0 18px}
+.menu-card .menu-price{margin-top:auto!important;margin-bottom:0!important;padding-top:16px;line-height:1.25}
+</style></head>
 <body>
 <div class="topline">Кава, десерти та особливі моменти ♡</div>
 <header class="navwrap"><nav class="container nav" aria-label="Головна навігація"><a class="brand" href="#home">in <em>love</em> coffee<small>COFFEE & SWEETS</small></a><button class="mobile-toggle" id="toggle" aria-label="Відкрити меню" aria-expanded="false">☰</button><div class="navlinks" id="navlinks"><a href="#about">Про нас</a><a href="#menu">Меню</a><a href="#gallery">Атмосфера</a><a href="#contacts">Контакти</a><a class="btn" href="#contacts">Завітати до нас ↗</a></div></nav></header>
@@ -198,7 +204,7 @@ const items={
     ]
   ]
 };
-const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,price])=>'<article class="menu-card fade"><div><h3>'+name+'</h3><p class="menu-price">'+price+'</p></div><span class="symbol" aria-hidden="true">♡</span></article>').join('')}
+const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,price])=>'<article class="menu-card fade"><h3>'+name+'</h3><p class="menu-price">'+price+'</p></article>').join('')}
 document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});tab.classList.add('active');tab.setAttribute('aria-selected','true');renderMenu(tab.dataset.category)}));renderMenu('coffee');
 const toggle=document.getElementById('toggle'),nav=document.getElementById('navlinks');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 </script>
