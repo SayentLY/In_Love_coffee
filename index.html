@@ -58,7 +58,7 @@ body{background:#15100f;color:#fff2e8}
 .eyebrow{color:#f58e87}
 @media(max-width:650px){.navlinks{background:#211817;border-color:#49332e}.hero-copy{padding-top:64px}.hero h1{font-size:clamp(58px,14vw,82px)}.hero-photo{min-height:340px}.menu-grid{grid-template-columns:repeat(2,1fr)}.location-card{box-shadow:10px 10px 0 #563332}}
 @media(max-width:380px){.menu-grid{grid-template-columns:1fr}}
-</style></head>
+</style><style>.menu-price{font-size:18px!important;font-weight:800!important;color:#9f4b51!important;letter-spacing:.01em;margin-top:12px!important}.menu-tabs{gap:8px}.menu-card{min-height:145px}</style></head>
 <body>
 <div class="topline">Кава, десерти та особливі моменти ♡</div>
 <header class="navwrap"><nav class="container nav" aria-label="Головна навігація"><a class="brand" href="#home">in <em>love</em> coffee<small>COFFEE & SWEETS</small></a><button class="mobile-toggle" id="toggle" aria-label="Відкрити меню" aria-expanded="false">☰</button><div class="navlinks" id="navlinks"><a href="#about">Про нас</a><a href="#menu">Меню</a><a href="#gallery">Атмосфера</a><a href="#contacts">Контакти</a><a class="btn" href="#contacts">Завітати до нас ↗</a></div></nav></header>
@@ -66,19 +66,139 @@ body{background:#15100f;color:#fff2e8}
 <section class="hero" id="home"><div class="hero-copy"><span class="eyebrow">Бориспіль · Київський Шлях, 76</span><h1>Кава,<br>десерти<br>та <i>любов.</i></h1><p>Місце для теплої розмови, улюбленої кави й солодкої паузи. Відчуй атмосферу in love coffee у самому серці Борисполя.</p><a class="btn" href="#menu">Відкрити меню <span>↗</span></a><div class="mini-info"><span>♡ Кава з любов’ю</span><span>✦ Десерти до настрою</span></div></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85" alt="Ароматна кава в затишній кав'ярні"><div class="round-stamp">made with<br>love<br>♡</div></div></section>
 <div class="ticker">✳ coffee & sweet moments &nbsp;&nbsp; ♡ &nbsp;&nbsp; baked with love &nbsp;&nbsp; ✳ &nbsp;&nbsp; your cozy place in Boryspil &nbsp;&nbsp; ♡</div>
 <section class="section" id="about"><div class="container about"><div class="about-images"><img class="main" loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=85" alt="Кава та затишна атмосфера"><img class="small" loading="lazy" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=700&q=85" alt="Солодкий сніданок до кави"></div><div class="about-copy"><span class="eyebrow">Знайомство</span><h2>Більше ніж<br>просто <i>кава.</i></h2><p>in love coffee — кав’ярня в самому Борисполі, куди хочеться забігти по улюблену каву, зустрітися з близькими або просто подарувати собі хвилину спокою.</p><p>У нашому асортименті — класична й авторська кава, освіжаючі напої, ніжні десерти, макаронс та солодощі без цукру.</p><div class="quote">«Закохуйся в маленькі моменти.»</div><a href="#contacts" class="btn light">Де нас знайти ↗</a></div></div></section>
-<section class="section menu-section" id="menu"><div class="container"><div class="center section-heading"><span class="eyebrow">Обирай серцем</span><h2>Меню з любов’ю</h2><p class="section-intro">Від першого ковтка ранкової кави до солодкої паузи посеред дня — знайди щось для себе.</p></div><div class="menu-tabs" role="tablist" aria-label="Категорії меню"><button class="tab active" data-category="coffee" role="tab" aria-selected="true">Кава</button><button class="tab" data-category="cold" role="tab" aria-selected="false">Холодні напої</button><button class="tab" data-category="other" role="tab" aria-selected="false">Інші напої</button><button class="tab" data-category="sweets" role="tab" aria-selected="false">Десерти</button></div><div class="menu-grid" id="menu-grid" aria-live="polite"></div><p class="menu-note">Асортимент та актуальні ціни уточнюйте безпосередньо в кав’ярні.</p></div></section>
+<section class="section menu-section" id="menu"><div class="container"><div class="center section-heading"><span class="eyebrow">Обирай серцем</span><h2>Меню з любов’ю</h2><p class="section-intro">Від першого ковтка ранкової кави до солодкої паузи посеред дня — знайди щось для себе.</p></div><div class="menu-tabs" role="tablist" aria-label="Категорії меню"><button class="tab active" data-category="coffee" role="tab" aria-selected="true">Кава</button><button class="tab" data-category="bubble" role="tab" aria-selected="false">Бабл ті</button><button class="tab" data-category="lemonade" role="tab" aria-selected="false">Лимонади</button><button class="tab" data-category="sugarfree" role="tab" aria-selected="false">Без цукру</button><button class="tab" data-category="other" role="tab" aria-selected="false">Інші напої</button><button class="tab" data-category="icedtea" role="tab" aria-selected="false">Айс ті</button></div><div class="menu-grid" id="menu-grid" aria-live="polite"></div><p class="menu-note">Ціни перенесено з фотографії меню; перед замовленням уточнюйте актуальність у кав’ярні. Подвійні ціни наведено без уточнення об’ємів.</p></div></section>
 <section class="section" id="gallery"><div class="container"><div class="center section-heading"><span class="eyebrow">Атмосфера in love</span><h2>Моменти, які надихають</h2><p class="section-intro">Натхненна фотопідбірка про каву, десерти й теплі зустрічі.</p></div><div class="gallery"><figure><img loading="lazy" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85" alt="Чашка кави"></figure><figure><img loading="lazy" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85" alt="Апетитні солодощі"></figure><figure><img loading="lazy" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Кавовий напій"></figure><figure><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Затишний простір кав’ярні"></figure></div><p class="menu-note">Візуальні матеріали — стилізовані ілюстрації атмосфери. Це не фотографії конкретного закладу.</p></div></section>
 <section class="section location-section" id="contacts"><div class="container location-grid"><div><span class="eyebrow">Чекаємо на тебе</span><h2>Зустрінемось<br>за кавою?</h2><p class="address">м. Бориспіль<br>вул. Київський Шлях, 76</p><div class="hours"><div><span>Понеділок — п’ятниця</span><strong>08:00 — 20:00</strong></div><div><span>Субота — неділя</span><strong>10:00 — 20:00</strong></div></div><div class="location-actions"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=in%20love%20coffee%20%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BF%D1%96%D0%BB%D1%8C%20%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%A8%D0%BB%D1%8F%D1%85%2076">Прокласти маршрут ↗</a></div></div><div class="location-card"><img loading="lazy" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=85" alt="Атмосфера затишної кав’ярні"></div></div></section>
 </main>
 <footer class="footer"><div class="container"><div class="footer-main"><div><a class="brand" href="#home">in <em>love</em> coffee</a><p>Кава. Десерти. Любов у кожному моменті.</p></div><div class="footer-links"><a href="#about">Про нас</a><a href="#menu">Меню</a><a href="#gallery">Атмосфера</a><a href="#contacts">Контакти</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> in love coffee · Демонстраційний сайт</span><span>Створено з любов’ю ♡</span></div></div></footer>
 <script>
 const items={
-coffee:[['Еспресо','Класика, з якої починається день'],['Капучино','Ніжна молочна пінка'],['Лате','М’який кавовий смак'],['Фільтр-кава','Для поціновувачів чистого смаку'],['Айс лате','Кава для прохолодного настрою'],['Айс раф','Ніжний холодний напій'],['Фредо флет','Освіжаючий кавовий вибір'],['Еспресо тонік','Яскраве поєднання смаків']],
-cold:[['Bubble Tea','Яскравий напій з кульками'],['Лимонад «Черешня»','Фруктова свіжість'],['Лимонад «Маракуя»','Тропічний настрій'],['Грейпфрут — полуниця','Ягідно-цитрусова свіжість'],['Грейпфрут — малина','Легкий кисло-солодкий смак'],['Кавовий лимонад','Неочікуване поєднання'],['Айс какао','Шоколадна прохолода']],
-other:[['Матча','Ніжний зелений напій'],['Айс ті','Освіжаючий чай'],['Класичний чай','Тепло у чашці'],['Мохіто','Свіжий м’ятний настрій'],['Комбуча','Напій для нових вражень'],['Мілкшейк','Ніжний молочний десерт'],['Какао','Шоколадна класика']],
-sweets:[['Макаронс','Маленька солодка радість'],['Тістечка','Десерт до улюбленої кави'],['Торти','Для особливих моментів'],['Випічка','Щось смачне до кави'],['Десерти без цукру','Солодкі альтернативи']]
+  "coffee": [
+    [
+      "Айс лате",
+      "75 / 85 ₴"
+    ],
+    [
+      "Айс раф",
+      "80 / 90 ₴"
+    ],
+    [
+      "Фредо флет",
+      "75 ₴"
+    ],
+    [
+      "Американо фредо",
+      "50 ₴"
+    ],
+    [
+      "Бамбл",
+      "75 / 90 ₴"
+    ],
+    [
+      "Еспресо тонік",
+      "75 / 90 ₴"
+    ],
+    [
+      "Кавовий лимонад",
+      "120 ₴"
+    ]
+  ],
+  "bubble": [
+    [
+      "Bubble Tea InLOVE",
+      "100 ₴"
+    ],
+    [
+      "Nescic Bubbles",
+      "100 ₴"
+    ],
+    [
+      "Класичний Bubble Tea",
+      "100 ₴"
+    ],
+    [
+      "Джусі боли (добавка)",
+      "35 ₴"
+    ]
+  ],
+  "lemonade": [
+    [
+      "Черешня",
+      "65 / 95 ₴"
+    ],
+    [
+      "Маракуя",
+      "85 / 120 ₴"
+    ],
+    [
+      "Грейпфрут — полуниця",
+      "70 / 100 ₴"
+    ],
+    [
+      "Грейпфрут — малина",
+      "70 / 100 ₴"
+    ]
+  ],
+  "sugarfree": [
+    [
+      "Лимонна полуниця",
+      "85 / 120 ₴"
+    ],
+    [
+      "Лимонна маракуя",
+      "85 / 120 ₴"
+    ],
+    [
+      "Мохіто",
+      "85 ₴"
+    ]
+  ],
+  "other": [
+    [
+      "Мохіто",
+      "85 ₴"
+    ],
+    [
+      "Апероль",
+      "85 ₴"
+    ],
+    [
+      "Айс какао",
+      "65 / 75 ₴"
+    ],
+    [
+      "Мілкшейк",
+      "70 ₴"
+    ],
+    [
+      "Комбуча",
+      "65 ₴"
+    ]
+  ],
+  "icedtea": [
+    [
+      "Лічі",
+      "85 ₴"
+    ],
+    [
+      "Полуниця",
+      "85 ₴"
+    ],
+    [
+      "Малина",
+      "85 ₴"
+    ],
+    [
+      "Маракуя",
+      "85 ₴"
+    ],
+    [
+      "Манго",
+      "85 ₴"
+    ]
+  ]
 };
-const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,desc])=>'<article class="menu-card fade"><div><h3>'+name+'</h3><p>'+desc+'</p></div><span class="symbol" aria-hidden="true">♡</span></article>').join('')}
+const grid=document.getElementById('menu-grid');function renderMenu(category){grid.innerHTML=items[category].map(([name,price])=>'<article class="menu-card fade"><div><h3>'+name+'</h3><p class="menu-price">'+price+'</p></div><span class="symbol" aria-hidden="true">♡</span></article>').join('')}
 document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});tab.classList.add('active');tab.setAttribute('aria-selected','true');renderMenu(tab.dataset.category)}));renderMenu('coffee');
 const toggle=document.getElementById('toggle'),nav=document.getElementById('navlinks');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 </script>
